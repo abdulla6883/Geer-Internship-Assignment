@@ -27,7 +27,7 @@ export default function SearchFilters({ onSearch, onFilter }: SearchFiltersProps
   };
 
   return (
-    <div className="bg-white border-b border-gray-200">
+    <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div className="flex-1 max-w-2xl">
@@ -37,15 +37,15 @@ export default function SearchFilters({ onSearch, onFilter }: SearchFiltersProps
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={handleSearchInput}
-                className="pl-10 py-3 border-gray-300 focus:ring-2 focus:ring-geer-primary focus:border-transparent"
+                className="pl-10 py-3 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-geer-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 h-4 w-4" />
             </div>
           </div>
           
           <div className="flex flex-wrap gap-4">
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-              <SelectTrigger className="w-[180px] border-gray-300 focus:ring-2 focus:ring-geer-primary">
+              <SelectTrigger className="w-[180px] border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-geer-primary bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
                 <SelectValue placeholder="All Categories" />
               </SelectTrigger>
               <SelectContent>
@@ -58,7 +58,7 @@ export default function SearchFilters({ onSearch, onFilter }: SearchFiltersProps
             </Select>
             
             <Select value={priceFilter} onValueChange={setPriceFilter}>
-              <SelectTrigger className="w-[150px] border-gray-300 focus:ring-2 focus:ring-geer-primary">
+              <SelectTrigger className="w-[150px] border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-geer-primary bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
                 <SelectValue placeholder="All Prices" />
               </SelectTrigger>
               <SelectContent>

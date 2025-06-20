@@ -82,7 +82,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
       <Header />
       
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -104,11 +104,11 @@ export default function ProductDetail() {
             />
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               {product.name}
             </h1>
-            <p className="text-gray-600 mb-6 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg">
               {product.description}
             </p>
             
@@ -119,25 +119,25 @@ export default function ProductDetail() {
             </div>
             
             <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-2">Category:</h4>
-              <span className="inline-block px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm capitalize">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Category:</h4>
+              <span className="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm capitalize">
                 {product.category}
               </span>
             </div>
 
             <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 mb-2">Stock Status:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Stock Status:</h4>
               <span className={`inline-block px-3 py-1 rounded-full text-sm ${
                 product.inStock 
-                  ? 'bg-green-100 text-green-800' 
-                  : 'bg-red-100 text-red-800'
+                  ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200' 
+                  : 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200'
               }`}>
                 {product.inStock ? 'In Stock' : 'Out of Stock'}
               </span>
             </div>
             
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Quantity:
               </label>
               <div className="flex items-center space-x-3">
@@ -149,7 +149,7 @@ export default function ProductDetail() {
                 >
                   <Minus className="h-4 w-4" />
                 </Button>
-                <span className="px-4 py-2 border border-gray-300 rounded-lg min-w-[60px] text-center">
+                <span className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg min-w-[60px] text-center bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                   {quantity}
                 </span>
                 <Button

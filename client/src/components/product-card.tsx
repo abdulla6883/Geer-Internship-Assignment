@@ -12,7 +12,7 @@ interface ProductCardProps {
 export default function ProductCard({ product, onClick, onAddToCart }: ProductCardProps) {
   return (
     <Card 
-      className="product-card bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
+      className="product-card bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
       onClick={onClick}
     >
       <div className="relative">
@@ -24,21 +24,21 @@ export default function ProductCard({ product, onClick, onAddToCart }: ProductCa
         <Button
           variant="ghost"
           size="icon"
-          className="absolute top-3 right-3 p-2 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors opacity-0 group-hover:opacity-100"
+          className="absolute top-3 right-3 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors opacity-0 group-hover:opacity-100"
           onClick={(e) => {
             e.stopPropagation();
             // TODO: Implement wishlist functionality
           }}
         >
-          <Heart className="h-4 w-4 text-gray-400 hover:text-red-500" />
+          <Heart className="h-4 w-4 text-gray-400 dark:text-gray-500 hover:text-red-500" />
         </Button>
       </div>
       
       <CardContent className="p-4">
-        <h3 className="font-semibold text-lg mb-2 text-gray-900">
+        <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">
           {product.name}
         </h3>
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
           {product.description}
         </p>
         <div className="flex items-center justify-between">
