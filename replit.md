@@ -16,8 +16,8 @@ This is a full-stack e-commerce application built with React (frontend) and Expr
 
 ### Backend Architecture
 - **Framework**: Express.js with TypeScript
-- **Database**: PostgreSQL with Drizzle ORM
-- **Storage Layer**: Abstracted storage interface with in-memory implementation for development
+- **Database**: PostgreSQL with Drizzle ORM (now fully integrated)
+- **Storage Layer**: Abstracted storage interface with PostgreSQL database implementation
 - **API Design**: RESTful API with clear separation of concerns
 - **Development Setup**: Hot reloading with automatic server restart
 
@@ -30,8 +30,8 @@ The application uses a PostgreSQL database with two main tables:
 
 ### Storage Layer
 - **Interface-based Design**: `IStorage` interface allows for easy switching between storage implementations
-- **Development Storage**: In-memory storage with sample data for quick development
-- **Production Ready**: Configured for PostgreSQL with Drizzle ORM
+- **PostgreSQL Integration**: Full database integration with persistent data storage
+- **Production Ready**: Live PostgreSQL database with Drizzle ORM and 8 sample products
 
 ### Frontend Features
 - **Product Catalog**: Grid-based product display with responsive design
