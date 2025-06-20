@@ -11,7 +11,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/">
               <h1 className="text-2xl font-bold text-geer-primary cursor-pointer">
-                Geer Store
+                AS Store
               </h1>
             </Link>
           </div>

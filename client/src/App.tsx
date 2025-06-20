@@ -21,7 +21,7 @@ function Router() {
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="system" storageKey="geer-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="as-ui-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />

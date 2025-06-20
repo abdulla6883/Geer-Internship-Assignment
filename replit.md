@@ -1,4 +1,4 @@
-# E-Commerce Application
+# AS Store - E-Commerce Application
 
 ## Overview
 
