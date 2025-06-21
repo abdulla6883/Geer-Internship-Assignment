@@ -25,11 +25,19 @@ export default function Products() {
     if (searchQuery) params.append("search", searchQuery);
     if (categoryFilter) params.append("category", categoryFilter);
     if (priceFilter) params.append("priceRange", priceFilter);
-    return params.toString();
+    const queryString = params.toString();
+    return queryString ? `?${queryString}` : '';
   };
 
   const { data: products = [], isLoading, error } = useQuery<Product[]>({
-    queryKey: [`/api/products?${buildQueryParams()}`],
+    queryKey: ['/api/products', searchQuery, categoryFilter, priceFilter],
+    queryFn: async () => {
+      const response = await fetch(`/api/products${buildQueryParams()}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch products');
+      }
+      return response.json();
+    },
     staleTime: 0, // Always refetch when filters change
   });
 
